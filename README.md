@@ -1,5 +1,7 @@
 # Spec-Driven Development Course
 
+See <https://learn.deeplearning.ai/courses/spec-driven-development-with-coding-agents>
+
 This repository contains the companion code for the DeepLearning.AI Spec-Driven Development course. Each lesson folder holds the complete project state you need to follow along with that lesson's video.
 
 ## How to use this repo
@@ -19,7 +21,7 @@ npm install
 Each lesson folder contains the **complete starter code** for that lesson and **all prompts used** throughout the video.
 
 | Folder | Lesson | What you're starting with |
-|--------|--------|--------------------------|
+| -------- | -------- | -------------------------- |
 | Lesson_04 | Creating the Constitution | Empty project scaffold (package.json, tsconfig.json, src/index.ts) |
 | Lesson_05 | Feature Specification | Constitution in place (specs/mission.md, tech-stack.md, roadmap.md) |
 | Lesson_06 | Feature Implementation | Constitution + Phase 1 feature spec (plan.md, requirements.md, validation.md) |
