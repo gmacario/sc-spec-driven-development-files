@@ -1,39 +1,43 @@
-# AgentClinic Technology Stack
+# Tech Stack
 
-## Overview
+AgentClinic is a server-side TypeScript application. All rendering happens on the server; the browser receives plain HTML that works well and looks good.
 
-AgentClinic is built using TypeScript with Next.js (App Router), providing a modern, reliable full-stack solution with server-side rendering.
+## Core
 
-## Frontend
+| Layer | Choice | Rationale |
+| --- | --- | --- |
+| Language | TypeScript | Type safety end-to-end; satisfies Mary's requirement |
+| Runtime | Node.js | Stable, well-supported, vast ecosystem |
+| Server framework | **Hono** | Lightweight, TypeScript-first, fast, excellent DX; routes and middleware feel natural |
+| Templating | Hono JSX (server-side) | JSX without React overhead; components are just functions |
+| CSS | Plain CSS + CSS custom properties | No build step required; Steve gets a modern, attractive result |
 
-- **Framework**: Next.js (App Router)
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS with responsive design
-- **State Management**: React Context API for global state
-- **Form Handling**: React Hook Form with Zod validation
-- **Data Fetching**: Server Components with Server Actions
+## Recommended: Hono
 
-## Backend
+[Hono](https://hono.dev) is chosen over Express/Fastify because:
 
-- **Runtime**: Node.js
-- **Language**: TypeScript
-- **API**: Next.js API routes (server-side)
-- **Database**: SQLite (via better-sqlite3 driver)
-- **Authentication**: NextAuth.js for agent and staff access control
+- First-class TypeScript with zero config
+- Built-in JSX renderer for server-side HTML
+- Middleware model is simple and composable
+- Runs on Node, Deno, Bun, and edge runtimes without changes
 
-## Features
+## Data
 
-- Dashboard for agents and staff
-- Therapy management
-- Appointment booking system
-- Ailment tracking
+- **SQLite** (via `better-sqlite3`) for local development and early production — simple, embedded, no infrastructure
+- Migrations via plain SQL files; no ORM to start
 
-## Browser Support
+## Testing
 
-Modern browsers with support for current browser versions to ensure optimal user experience.
+- **Vitest** — fast, TypeScript-native, compatible with the rest of the stack
+
+## Tooling
+
+- `tsx` for development (run TypeScript directly, no build step needed)
+- `tsc` for production builds
+- `prettier` for formatting
 
 ## What We Are Not Using
 
-- No React, Vue, or Svelte - server-side rendering keeps the stack simple
-- No ORM - SQL is sufficient at this scale
-- No Docker - not yet; that's a later phase concern
+- No React, Vue, or Svelte — server-side rendering keeps the stack simple
+- No ORM — SQL is sufficient at this scale
+- No Docker — not yet; that's a later phase concern
