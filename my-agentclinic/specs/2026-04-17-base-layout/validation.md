@@ -44,7 +44,7 @@ Run these commands to validate:
 # Install dependencies
 npm install
 
-# Start dev server and visit http://localhost:3000
+# Start dev server (runs on http://localhost:4000)
 npm run dev
 
 # Test TypeScript types
