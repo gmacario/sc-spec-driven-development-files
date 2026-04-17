@@ -14,13 +14,14 @@
 2. Add root route `/` returning "AgentClinic is open for business"
 3. Test route renders correctly with `tsx`
 
-## Task Group 3 — Home Page Layout
+## Task Group 3 — Layout Components
 
-1. Create `src/layouts/Layout.tsx` with header, nav, main, footer structure
-2. Create `src/layouts/HomeLayout.tsx` wrapping home page content
-3. Update root route `/` to render "AgentClinic is open for business" inside home layout
-4. Add basic CSS for layout structure (centered content, readable typography)
-5. Verify all content renders inside shared layout wrapper
+1. Create `src/layouts/Header.tsx` component
+2. Create `src/layouts/Footer.tsx` component
+3. Create `src/layouts/Main.tsx` wrapper component
+4. Create `src/layouts/Layout.tsx` combining all subcomponents
+5. Import CSS in server and link to public/styles.css
+6. Verify all content renders inside shared layout wrapper
 
 ## Task Group 4 — Type Verification
 

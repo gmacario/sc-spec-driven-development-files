@@ -1,1 +1,1 @@
-/// <reference path="./global.d.ts" />
+/// <reference types="hono/jsx" />

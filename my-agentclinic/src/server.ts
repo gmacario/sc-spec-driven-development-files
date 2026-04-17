@@ -1,6 +1,7 @@
 import { serve } from "@hono/node-server";
 import { Hono } from "hono";
 import { cors } from "hono/cors";
+import { Layout } from "./layouts/Layout.js";
 
 const app = new Hono();
 
@@ -14,19 +15,9 @@ app.get("/", (c) => {
         <link rel="stylesheet" href="/styles.css" />
       </head>
       <body>
-        <div class="layout">
-          <header class="header">
-            <nav class="nav">
-              <a href="/">Home</a>
-            </nav>
-          </header>
-          <main class="main">
-            <h1>AgentClinic is open for business</h1>
-          </main>
-          <footer class="footer">
-            <p>AgentClinic - where no agent suffers alone</p>
-          </footer>
-        </div>
+        <Layout>
+          <h1>AgentClinic is open for business</h1>
+        </Layout>
       </body>
     </html>`,
   );
